@@ -39,9 +39,7 @@ describe('root scope click', function() {
     $rootScope.args = { };
     var newValue = null;
     var child = $rootScope.$new();
-    let element = $compile(`<div rs-click="test" rs-click-args="args">
-                                <div id="test">{{newValue}}</div>
-                            </div>`)($rootScope);
+    let element = $compile(`<div rs-click="test" rs-click-args="args"><div id="test">{{newValue}}</div></div>`)($rootScope);
     $rootScope.$apply();
     child.$on('test', function() {
       $rootScope.newValue = 'test';
