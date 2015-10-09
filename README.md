@@ -1,4 +1,4 @@
-[![Build Status]https://travis-ci.org/KamBha/angular-rootscope-events.svg?branch=master](https://travis-ci.org/KamBha/angular-rootscope-events)
+[![Build Status](https://travis-ci.org/KamBha/angular-rootscope-events.svg?branch=master)](https://travis-ci.org/KamBha/angular-rootscope-events)
 
 # angular-rootscope-events
 
