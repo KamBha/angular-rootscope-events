@@ -17,7 +17,7 @@ export function RootScopeClickDirective($rootScope) {
     function clickHandler() {
       var args = scope.$eval(attrs.rsClickArgs);
       var event = scope.$eval(attrs.rsClick);
-      if (!((typeof event) === 'string'))
+      if (!angular.isString(event))
         throw new Error("Invalid event.  Must be a string");
 
       if (event === '$destroy')
@@ -25,7 +25,8 @@ export function RootScopeClickDirective($rootScope) {
       if (args)
         $rootScope.$broadcast(event, args);
       else
-        $rootScope.$broadcast(event)
+        $rootScope.$broadcast(event);
+      scope.$apply();
     }
 
 

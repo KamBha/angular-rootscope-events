@@ -34,6 +34,22 @@ describe('root scope click', function() {
     expect($rootScope.$broadcast).toHaveBeenCalledWith('test', $rootScope.args);
   }));
 
+  it('should update scope on event', inject(function() {
+    $rootScope.test = 'test';
+    $rootScope.args = { };
+    var newValue = null;
+    var child = $rootScope.$new();
+    let element = $compile(`<div rs-click="test" rs-click-args="args">
+                                <div id="test">{{newValue}}</div>
+                            </div>`)($rootScope);
+    $rootScope.$apply();
+    child.$on('test', function() {
+      $rootScope.newValue = 'test';
+    });
+    element.triggerHandler('click');
+    expect(element.find('#test').text()).toBe('test');
+  }));
+
   it('should fail when non-string is event', inject(function() {
     $rootScope.test = {};
     let element = $compile(`<div rs-click="test" rs-click-args="args"></div>`)($rootScope);
