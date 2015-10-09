@@ -99,7 +99,7 @@ module.exports = function(config) {
 
 
     sauceLabs: {
-      testName: 'Angular disclosure panel'
+      testName: 'Angular root scope events'
     },
 
     captureTimeout: 360000,
