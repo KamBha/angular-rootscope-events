@@ -1,0 +1,40 @@
+{
+  "name": "rootScopeEvents",
+  "main": "./dist/scripts/app.js",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular-animate": "~1.4.0",
+    "jquery": "~2.1.4",
+    "animate.css": "~3.4.0",
+    "angular": "~1.4.7"
+  },
+  "ignore": [
+    "src",
+    "typings",
+    "node_modules",
+    ".bowerrc",
+    ".gitignore",
+    ".eslintrc",
+    ".editorconfig",
+    "bower.json",
+    "package.json",
+    "coverage",
+    ".vscode",
+    "bower_components",
+    "README.md",
+    "gulp",
+    "protractor.conf",
+    "karma.conf",
+    ".yo-rc.json",
+    "jsconfig.json",
+    "gulpfile.js"
+  ],
+  "devDependencies": {
+    "angular-mocks": "~1.4.0",
+    "ng-improved-testing": "~0.3.0"
+  },
+  "resolutions": {
+    "jquery": "~2.1.4",
+    "angular": "~1.4.0"
+  }
+}
